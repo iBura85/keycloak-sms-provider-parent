@@ -1,0 +1,2 @@
+com.qontrol.keycloak.sms.providers.spi.TokenCodeServiceSpi
+com.qontrol.keycloak.sms.providers.spi.PhoneMessageServiceSpi
