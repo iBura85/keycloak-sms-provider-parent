@@ -21,6 +21,7 @@ public class TelegramMessageServiceProviderFactory implements MessageSenderServi
 
     @Override
     public void init(Scope config) {
+        logger.info(String.format("~~~ Загруженная конфигурация: chatId = %s, token = %s ~~~", config.get("chatId"), config.get("token")));
         this.config = config;
     }
 

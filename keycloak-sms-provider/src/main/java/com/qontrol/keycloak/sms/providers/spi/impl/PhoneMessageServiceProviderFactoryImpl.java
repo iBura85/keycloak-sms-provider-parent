@@ -20,7 +20,6 @@ public class PhoneMessageServiceProviderFactoryImpl implements PhoneMessageServi
 
     @Override
     public void init(Scope config) {
-        logger.warn("init");
         this.config = config;
     }
 
@@ -36,6 +35,6 @@ public class PhoneMessageServiceProviderFactoryImpl implements PhoneMessageServi
 
     @Override
     public String getId() {
-        return null;
+        return "default";
     }
 }

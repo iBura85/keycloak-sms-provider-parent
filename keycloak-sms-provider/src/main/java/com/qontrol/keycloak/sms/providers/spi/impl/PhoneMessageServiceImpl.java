@@ -29,9 +29,6 @@ public class PhoneMessageServiceImpl implements PhoneMessageService {
         // получить конфигурацию из Scope
         this.tokenExpiresIn = config.getInt("tokenExpiresIn", 60);
 
-
-         logger.warn("~~ SERVICE ~~: " + session.listProviderIds(MessageSenderService.class));
-
         this.service = session.listProviderIds(MessageSenderService.class)
                 .stream().filter(s -> s.equals(config.get("service")))
                 .findFirst().orElse(
@@ -44,8 +41,8 @@ public class PhoneMessageServiceImpl implements PhoneMessageService {
 
     @Override
     public int sendTokenCode(String phone, TokenCodeType type)  {
-        logger.warn("============ SEND TOKEN!!!: " );
-        logger.warn("============ MessageSenderService: " +  service);
+
+        logger.warn("~~~ tokenExpiresIn" +  tokenExpiresIn);
 
         String code = "1234";
 

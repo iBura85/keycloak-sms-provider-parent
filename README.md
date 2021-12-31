@@ -7,17 +7,27 @@
         <provider>module:com.qontrol.keycloak.sms.sender.telegram</provider>
     </providers>
 </subsystem>
-``` 
+```
+
+```xml
+<spi name="phoneMessageService">
+    <provider name="default" enabled="true">
+        <properties>
+            <property name="service" value="Telegram"/>
+            <property name="tokenExpiresIn" value="60"/>
+        </properties>
+    </provider>
+</spi>
+```
 
 ```xml
 <spi name="messageSenderService">
-<provider name="Telegram" enabled="true">
-    <properties>
-<!--        <property name="accountSid" value="YOUR_ACCOUNT_SID_HERE"/>-->
-<!--        <property name="authToken" value="YOUR_AUTH_TOKEN_HERE"/>-->
-<!--        <property name="twilioPhoneNumber" value="YOUR_PURCHASED_TWILIO_NUMBER"/>-->
-    </properties>
-</provider>
+    <provider name="Telegram" enabled="true">
+        <properties>
+            <property name="token" value="1330853441:AAGudvxb6LGAosP8BeJNTbS1vIUcR8WKX3g"/>
+            <property name="chatId" value="248614760"/>
+        </properties>
+    </provider>
 </spi>
 ```
 

@@ -29,6 +29,6 @@ public class TokenCodeServiceProviderFactoryImpl implements TokenCodeServiceProv
 
     @Override
     public String getId() {
-        return null;
+        return "TokenCodeServiceProviderFactoryImpl";
     }
 }
