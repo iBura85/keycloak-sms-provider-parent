@@ -1,6 +1,7 @@
 package com.qontrol.keycloak.sms.providers.rest;
 
 import com.qontrol.keycloak.sms.providers.constants.TokenCodeType;
+import com.qontrol.keycloak.sms.providers.exceptions.MessageSendException;
 import com.qontrol.keycloak.sms.providers.spi.PhoneMessageService;
 import org.jboss.logging.Logger;
 import org.jboss.resteasy.annotations.cache.NoCache;
@@ -27,7 +28,7 @@ public class TokenCodeResource {
     @NoCache
     @Path("")
     @Produces(APPLICATION_JSON)
-    public Response getTokenCode(@QueryParam("phone") String phone) {
+    public Response getTokenCode(@QueryParam("phone") String phone) throws MessageSendException {
 
         if (phone == null) throw new BadRequestException("Необходимо указать номер телефона");
 

@@ -11,25 +11,21 @@ public class PhoneMessageServiceSpi implements Spi {
 
     @Override
     public boolean isInternal() {
-        logger.warn("isInternal");
         return false;
     }
 
     @Override
     public String getName() {
-        logger.warn("getName");
         return "phoneMessageService";
     }
 
     @Override
     public Class<? extends Provider> getProviderClass() {
-        logger.warn("getProviderClass");
         return PhoneMessageService.class;
     }
 
     @Override
     public Class<? extends ProviderFactory> getProviderFactoryClass() {
-        logger.warn("getProviderFactoryClass");
         return PhoneMessageServiceProviderFactory.class;
     }
 }

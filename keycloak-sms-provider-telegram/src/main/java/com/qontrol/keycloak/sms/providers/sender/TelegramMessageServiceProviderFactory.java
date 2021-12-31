@@ -3,6 +3,7 @@ package com.qontrol.keycloak.sms.providers.sender;
 import com.qontrol.keycloak.sms.providers.spi.MessageSenderService;
 import com.qontrol.keycloak.sms.providers.spi.MessageSenderServiceProviderFactory;
 
+import org.jboss.logging.Logger;
 import org.keycloak.Config.Scope;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
@@ -10,6 +11,8 @@ import org.keycloak.models.KeycloakSessionFactory;
 public class TelegramMessageServiceProviderFactory implements MessageSenderServiceProviderFactory {
 
     private Scope config;
+
+    private static final Logger logger = Logger.getLogger(TelegramMessageSenderServiceProvider.class);
 
     @Override
     public MessageSenderService create(KeycloakSession keycloakSession) {
