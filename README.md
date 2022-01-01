@@ -13,7 +13,7 @@
 <spi name="phoneMessageService">
     <provider name="default" enabled="true">
         <properties>
-            <property name="service" value="Telegram"/>
+            <property name="service" value="telegram"/>
             <property name="tokenExpiresIn" value="60"/>
         </properties>
     </provider>
@@ -22,7 +22,7 @@
 
 ```xml
 <spi name="messageSenderService">
-    <provider name="Telegram" enabled="true">
+    <provider name="telegram" enabled="true">
         <properties>
             <property name="token" value="1330853441:AAGudvxb6LGAosP8BeJNTbS1vIUcR8WKX3g"/>
             <property name="chatId" value="248614760"/>

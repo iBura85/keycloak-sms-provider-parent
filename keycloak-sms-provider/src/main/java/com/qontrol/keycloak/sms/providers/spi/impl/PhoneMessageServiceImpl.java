@@ -46,6 +46,9 @@ public class PhoneMessageServiceImpl implements PhoneMessageService {
 
         String code = "1234";
 
+
+        logger.warn("~~~ service" +  service);
+
         try {
             session.getProvider(MessageSenderService.class, service).sendSmsMessage(type, phone, code, 123324);
         } catch (MessageSendException e) {
